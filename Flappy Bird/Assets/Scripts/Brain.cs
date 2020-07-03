@@ -35,19 +35,30 @@ public class Brain : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if(col.gameObject.tag == "top" ||
-           col.gameObject.tag == "bottom" ||
-           col.gameObject.tag == "upwall" ||
-           col.gameObject.tag == "downwall")
+        if (col.gameObject.tag == "top" ||
+          col.gameObject.tag == "bottom" ||
+          col.gameObject.tag == "upwall" ||
+          col.gameObject.tag == "downwall")
         {
             crash++;
         }
 
-        else if(col.gameObject.tag == "dead")
+        else if (col.gameObject.tag == "dead")
         {
             alive = false;
         }
     }
+
+    //private void OnCollisionStay2D(Collision2D col)
+    //{
+    //    if (col.gameObject.tag == "top" ||
+    //       col.gameObject.tag == "bottom" ||
+    //       col.gameObject.tag == "upwall" ||
+    //       col.gameObject.tag == "downwall")
+    //    {
+    //        crash++;
+    //    }
+    //}
 
     void Update()
     {
